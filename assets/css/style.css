@@ -1,6 +1,6 @@
 @font-face {
   font-family: "khongdetotinh";
-  src: url(./assets/fonts/RixLoveFool.ttf);
+  src: url(../../assets/fonts/RixLoveFool.ttf);
   font-weight: bold;
 }
 
@@ -16,7 +16,7 @@
 
 .main {
   display: flex;
-  background-image: url(./assets/img/background.jpg);
+  background-image: url(../../assets/img/background.jpg);
   height: 100vh;
   width: auto;
   overflow: auto;
