@@ -40,7 +40,7 @@ handleClickBtnNo = () => {
 };
 
 handleClickBtnAgree = () => {
-    const audio = new Audio('/assets/sounds/CoEmDoiBongVui-Chillies.mp3');
+    const audio = new Audio('./assets/sounds/CoEmDoiBongVui-Chillies.mp3');
 
     soundStart.pause();
     audio.play();
@@ -62,7 +62,7 @@ handleClickBtnPlease = () => {
 }
 
 handleClickBtnNoAgree = () => {
-    const audio = new Audio('/assets/sounds/duck.mp3');
+    const audio = new Audio('./assets/sounds/duck.mp3');
     audio.play();
     let OffsetX = 0;
     let OffsetY = 0;
