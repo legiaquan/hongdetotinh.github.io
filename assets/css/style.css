@@ -115,7 +115,7 @@
   transition: transform 0.2s;
 }
 
-a .btn {
+.modal-question-block .modal-question-block__modal .title a {
   text-decoration: none;
   color: #fff;
 }
