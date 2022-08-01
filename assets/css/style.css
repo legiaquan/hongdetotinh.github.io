@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "khongdetotinh";
+  src: url(/assets/fonts/RixLoveFool.ttf);
+  font-weight: bold;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "khongdetotinh";
+  color: #007500;
+}
+
+.main {
+  display: flex;
+  background-image: url(/assets/img/background.jpg);
+  height: 100vh;
+  width: auto;
+  overflow: auto;
+  justify-content: center;
+  position: relative;
+}
+
+
+.play-with-me__block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.play-with-me__block h1,
+.play-with-me__block h3  {
+  text-align: center;
+}
+
+.play-with-me__block h1 {
+  font-size: 50px;
+
+}
+
+.play-with-me__block h3 {
+  font-size: 30px;
+}
+
+.modal-question-block {
+  opacity: 0;
+  max-width: 600px;
+  width: calc(100% - 25px);
+  height: 500px;
+  background: #fff;
+  border: 1px solid #f6f6f6;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 8px 8px rgb(0 0 0 / 4%), 0px 24px 40px rgb(0 0 0 / 16%);
+}
+
+.modal-question-block .modal-question-block__modal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.modal-question-block .modal-question-block__modal .title {
+  margin: 15px;
+  text-align: center;
+}
+
+.modal-question-block .modal-question-block__modal .img-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-question-block .modal-question-block__modal .img-block img {
+  max-width: 320px;
+  width: calc(100% - 30px);
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 8px 8px rgb(0 0 0 / 4%), 0px 24px 40px rgb(0 0 0 / 16%);
+}
+
+.modal-question-block .modal-question-block__modal .input-control {
+  border: 1px solid;
+    border-radius: 5px;
+    max-width: 300px;
+    width: 100%;
+    height: 30px;
+}
+
+.btn-group {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-group .btn {
+  margin: 5px;
+}
+
+.btn {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #606060;
+  border-radius: 5px;
+  user-select: none;
+  transition: transform 0.2s;
+}
+
+a .btn {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn--scale {
+  transition: transform 0.2s;
+}
+
+.btn--scale:hover {
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.btn.btn-agree,
+.btn.btn-please {
+  cursor: pointer;
+  background-color: #098054;
+  box-shadow: 0px 8px 8px rgb(0 0 0 / 4%), 0px 24px 40px rgb(0 0 0 / 16%);
+}
+
+.btn.btn-no-agree {
+  position: absolute;
+}
+
+.btn.btn-no {
+  background-color: #606060;
+}
+
+.btn.btn-no {
+  position: relative;
+  border-bottom: 1px dotted rgb(0, 0, 0);
+}
+
+.btn.btn-no:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: #1d1d1d;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity .25s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  top: -30px;
+  left: -45px;
+}
+
+.btn.btn-no:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup {
+  display: none;
+  align-items: center;
+  max-width: 100px;
+  width: 100%;
+  height: 50px;
+  background: #098054;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 8px 8px rgb(0 0 0 / 4%), 0px 24px 40px rgb(0 0 0 / 16%);
+}
+
+.popup .popup__title {
+  text-align: center;
+  color: #fff;
+}
+
+/* animations */
+.fade-in {
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.scale-zoom {
+	animation: scaleOpacity 1s ease-out infinite;
+}
+
+@keyframes scaleOpacity {
+	0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
